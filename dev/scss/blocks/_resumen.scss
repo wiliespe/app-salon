@@ -1,0 +1,74 @@
+.invalidar-cita {
+    margin-bottom:  $separacion / 2;
+    text-transform: uppercase;
+}
+
+.resumen-contenido {
+    margin: $separacion / 2  ;
+
+    h3 {
+            font-size: $normal5Size;
+            color: $colorSecundario;
+            text-align: center;
+            margin: 2rem 0;
+    }
+    p {
+
+        span {
+            font-weight: $bold;
+            color: $colorSecundario;
+            font-size: $normal2Size;
+        }
+    }
+
+    .resumen-servicios {
+        .contenedor-servicio {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #43453c;
+            .precio {
+                font-size: $normal2Size;
+                font-weight: $bold;
+                color: $colorSecundario;
+            }
+        }
+    }
+}
+
+.div-left {
+    text-align: left;
+}
+
+@include m {
+    
+    .div-right {
+        text-align: right;
+    }
+    
+}
+
+button.active {
+    background-color: $colorSecundario;
+    color: $blanco;
+}
+
+.footer {
+    background-color: #242629;
+    
+    color: $blanco;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: initial;
+    margin-top: 2rem;
+    @include m {
+        position: absolute;
+    }
+
+    
+}
+
+

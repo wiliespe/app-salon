@@ -1,0 +1,57 @@
+.section {
+    display: none;
+
+    h2 {
+        color: $colorSecundario;
+        text-transform: uppercase;
+        margin: $separacion / 2 0 ;
+    }
+
+    p {
+        color: $blanco;
+    }
+
+    
+}
+
+.mostrar-setion {
+    display: block !important;
+}
+
+.servicios {
+    text-align: start;
+    padding: 1rem;
+    
+    @include m {
+        @include grid(2, 1rem);
+    }
+    
+}
+.servicio {
+    background: $blanco;
+    color: black;
+    margin-bottom: 1rem;
+    padding: 2.5rem;
+    border-radius: .7rem;
+
+
+    .nombre-servicio {
+        color: black;
+        font-size: $normal3Size;
+    }
+
+    .precio-servicio {
+        color: $colorSecundario;
+        font-weight: $bold;
+        font-size: $normal4Size;
+    }
+
+}
+
+.servicio.seleccionado {
+    background: $colorSecundario;
+
+    p {
+        color: $blanco;
+    }
+}

@@ -1,0 +1,31 @@
+@mixin s {
+    @media (min-width: $s) {
+      @content;  
+    }
+}
+@mixin m {
+    @media (min-width: $m) {
+      @content;  
+    }
+}
+@mixin l {
+    @media (min-width: $l) {
+      @content;  
+    }
+}
+@mixin xl {
+    @media (min-width: $xl) {
+      @content;  
+    }
+}
+@mixin hd {
+    @media (min-width: $hd) {
+      @content;  
+    }
+}
+
+@mixin  grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}

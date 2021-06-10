@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../css/styles.css")
+        title Barber Shop   
+    body 
+        .container__app 
+            .app__img 
+            .app__info 
+                header 
+                    h1 App Barber Shop  
+                nav.tabs
+                    button(type="button" data-paso="1" id="btn-servicios") Servicios
+                    button(type="button" data-paso="2" id="btn-cliente") Información cliente
+                    button(type="button" data-paso="3" id="btn-resumen") Resumen
+                main.services
+                    section.section#paso-1
+                        h2 Servicios 
+                        p Elige tus servicios a continuación.
+                        #list-services.servicios 
+                    section.section#paso-2 
+                        h2 Tus datos y cita
+                        p Coloca tus datos y fecha de tu  cita
+                        form.formulario 
+                            .campo 
+                                label(for="nombre") Nombre 
+                                input(id="nombre", type= "text", placeholder="Tu nombre") 
+                            .campo 
+                                label(for="fecha") Fecha 
+                                input(id="fecha", type= "date", ) 
+                            .campo 
+                                label(for="hora") Hora 
+                                input(id="hora", type= "time",max="18:00" min="10:00") 
+                    section.section.resumen-contenido#paso-3 
+                        h2 Resumen 
+                .pagination
+                    button(type="button")#anterior &#8810 Anterior 
+                    button(type="button")#siguiente Siguiente &#8811 
+            footer
+                .footer.p-absolute Hecho con &hearts; por Wilian Peña
+    script(src="js/scripts-min.js") 

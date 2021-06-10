@@ -1,0 +1,65 @@
+.container__app {
+    background-color: $colorPrimario;
+    height: 100vh;
+    overflow-x: hidden;
+
+    .app__img {
+        height: 40rem;
+        background: url(../assets/img/barber-shop.png);
+        background-size: cover;
+    }
+    
+    @include m {
+        @include grid(2, 0);
+        grid-template-rows: 1fr 100px;
+        .app__img {
+            height: auto;
+            background-position: center center;
+        }
+    }
+}
+
+.app__info {
+    text-align: center;
+    background: $colorPrimario;
+    position: relative;
+    
+  h1 {
+      margin-top: $separacion / 2;
+      color: $blanco;
+  }
+}
+
+.tabs {
+    margin-top: $separacion / 2.5;
+    @include l {
+        padding-left: 1rem;
+        @include grid(3, 0);
+    }
+    button {
+        width: 90%;
+        padding: .8rem;
+        text-transform: capitalize;
+        font-weight: $bold;
+
+        margin-bottom: 1rem;
+
+        @include l {
+            margin-bottom: 0;
+           
+        }
+        
+        &:focus {
+            background: $colorSecundario;
+            color: $blanco;
+        }
+       
+    }
+}
+
+.services {
+    margin-bottom: $separacion / 2;
+}
+
+
+

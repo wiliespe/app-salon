@@ -1,0 +1,38 @@
+.pagination {
+
+    @include m {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: $separacion / 2.5;
+    }
+
+   button {
+        background-color: $colorSecundario;
+        color: $blanco;
+        padding: 1rem;
+        width: 90%;
+        font-weight: bold;
+        font-size: $normalSize;
+        letter-spacing: 0.2rem ;
+        &:first-of-type {
+            margin-bottom: 1rem;
+        }
+
+        &.ocultar-btn {
+            visibility: hidden;
+        }
+       
+
+
+        @include m {
+            width: auto;
+            &:first-of-type {
+                margin-bottom: 0;
+                margin-right: 1rem;
+            }
+
+           
+        }
+   } 
+}
+

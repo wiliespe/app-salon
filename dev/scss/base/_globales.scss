@@ -1,0 +1,240 @@
+html {
+    -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/**
+ *
+ * Hacer que el padding y el border de un elemento no incremente su ancho o alto
+ * si está definido y así evitar estar haciendo calculos innecesarios.
+ *
+ */
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/**
+ *
+ * Establecer por defecto la fuente a sans-serif.
+ *
+ */
+
+body {
+    font-family: $baseFontFamily;
+    font-size: $normalSize;
+    line-height: 1.2;
+    overflow-x: hidden;
+}
+
+/**
+ *
+ * Hacer que versiones viejas de IE muestren como bloque las
+ * nuevas etiquetas de HTML5.
+ *
+ */
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ main,
+ menu,
+ nav,
+ section,
+ summary {
+     display: block
+ }
+
+
+/**
+ *
+ * Reiniciar las propiedades de algunas etiquetas que por defecto varian
+ * en cada navegador.
+ *
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+    background: transparent;
+	vertical-align: baseline;
+    border-spacing: 0;
+}
+
+/*----------------------------------------------------------------------------*
+	$TEXTS
+	Este archivo contiene todo lo relacionado con los estilos para elementos
+	de tipografía a nivel global.
+*----------------------------------------------------------------------------*/
+
+p {
+    font-size: $normalSize;
+    margin-bottom: $normalSize;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+b,
+strong {
+    color: $colorText;
+}
+
+
+/**
+ *
+ * Hacer que todas las imágenes sean fluidas y eliminar el borde que se presenta
+ * en algunos navegadores al estar envuelto por un ancla.
+ *
+ */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+/**
+ *
+ * Eliminar los 'puntos' que por defecto se agregan a la etiqueta `ul` en
+ * cada item del listado. Y eliminar 'los números' que se agregan en el
+ * listado de la etiqueta `ol`.
+ *
+ */
+
+ul,
+ol {
+    list-style: none
+}
+
+/**
+ *
+ * Mostrar por defecto los enlaces sin el subrayado. Por otro lado se cambia
+ * el color por defecto de los enlaces.
+ *
+ */
+
+a {
+    outline: none;
+    text-decoration: none;
+    transition: all .2s ease;
+
+    &:hover {
+        background: $colorSecundario;
+    } 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headerFontFamily;
+    font-weight: 700;
+    color: $colorText;
+}
+
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+h5 {
+    font-size: $h5;
+}
+
+h6 {
+    font-size: $h6;
+}
+
+.container {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/*----------------------------------------------------------------------------*
+	$FORMS
+*----------------------------------------------------------------------------*/
+
+/**
+ *
+ * Heredar correctamente las propiedades de fuente y color, y reiniciar el
+ * valor del margen que se agrega en Firefox, Safari y Chrome.
+ *
+ */
+ button,
+ input,
+ select,
+ textarea {
+     border: none;
+     margin: 0;
+     color: inherit;
+ }
+ 
+ 
+ /**
+  *
+  * Cambia el icono del cursor a una 'mano' al pasar sobre un elemento de tipo botón.
+  *
+  */
+ button,
+ input[type="reset"],
+ input[type="submit"] {
+     cursor: pointer
+ }
+ 
+ 
+ /**
+  *
+  * Reiniciar el cursor a 'por defecto' al pasar sobre un elemento desactivado.
+  *
+  */
+ button[disabled],
+ input[disabled] {
+
+     cursor: default
+ }
+ 
+ 
+ /**
+  *
+  * Eliminar el scroll vertical que aparece en IE 8/9/10/11
+  *
+  */
+ textarea {
+
+     overflow: auto
+ }
+ 
+
+ :focus {
+    outline: none;
+}

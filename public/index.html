@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Barber Shop   </title>
+  </head>
+  <body> 
+    <div class="container__app"> 
+      <div class="app__img"> </div>
+      <div class="app__info"> 
+        <header> 
+          <h1>App Barber Shop  </h1>
+        </header>
+        <nav class="tabs">
+          <button type="button" data-paso="1" id="btn-servicios">Servicios</button>
+          <button type="button" data-paso="2" id="btn-cliente">Información cliente</button>
+          <button type="button" data-paso="3" id="btn-resumen">Resumen</button>
+        </nav>
+        <main class="services">
+          <section class="section" id="paso-1">
+            <h2>Servicios </h2>
+            <p>Elige tus servicios a continuación.</p>
+            <div class="servicios" id="list-services"> </div>
+          </section>
+          <section class="section" id="paso-2"> 
+            <h2>Tus datos y cita</h2>
+            <p>Coloca tus datos y fecha de tu  cita</p>
+            <form class="formulario"> 
+              <div class="campo"> 
+                <label for="nombre">Nombre </label>
+                <input id="nombre" type="text" placeholder="Tu nombre">
+              </div>
+              <div class="campo"> 
+                <label for="fecha">Fecha </label>
+                <input id="fecha" type="date">
+              </div>
+              <div class="campo"> 
+                <label for="hora">Hora </label>
+                <input id="hora" type="time" max="18:00" min="10:00">
+              </div>
+            </form>
+          </section>
+          <section class="section resumen-contenido" id="paso-3"> 
+            <h2>Resumen </h2>
+          </section>
+        </main>
+        <div class="pagination">
+          <button type="button" id="anterior">&#8810 Anterior </button>
+          <button type="button" id="siguiente">Siguiente &#8811 </button>
+        </div>
+      </div>
+      <footer>
+        <div class="footer p-absolute">Hecho con &hearts; por Wilian Peña</div>
+      </footer>
+    </div>
+  </body>
+  <script src="js/scripts-min.js"> </script>
+</html>
